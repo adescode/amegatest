@@ -13,7 +13,7 @@ type RouteName = 'Dashboard' | 'Market' | 'Profile';
 const MainTab = () => {
   return (
     <Tab.Navigator
-      initialRouteName="Feed"
+      initialRouteName="Dashboard"
       screenOptions={({route}) => ({
         tabBarActiveTintColor: colors.default,
         headerTintColor: colors.default,
@@ -42,7 +42,7 @@ const MainTab = () => {
           tabBarLabel: 'Market Data',
         }}
       />
-      <Tab.Screen name="Profile" component={Profile} />
+      <Tab.Screen key={'Profile'} name="Profile" component={Profile} />
     </Tab.Navigator>
   );
 };

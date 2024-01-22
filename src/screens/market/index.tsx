@@ -4,6 +4,7 @@ import {forexLiveData} from '../../services/httpServices';
 import {useIsFocused, useNavigation} from '@react-navigation/native';
 import useStore from '../../store';
 import LiveDataContent from '../../component/LiveDataContent';
+import colors from '../../theme/colors';
 
 const Market = () => {
   const navigation = useNavigation();
@@ -32,7 +33,9 @@ const Market = () => {
           );
         }}
         keyExtractor={item => item.f}
-        ListEmptyComponent={<ActivityIndicator size={'large'} />}
+        ListEmptyComponent={
+          <ActivityIndicator size={'large'} color={colors.default} />
+        }
       />
     </View>
   );

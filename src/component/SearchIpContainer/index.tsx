@@ -54,7 +54,7 @@ const SearchIpContainer = () => {
         />
         <TouchableOpacity onPress={handleSubmit} style={styles.inputButton}>
           {isLoading ? (
-            <ActivityIndicator size={24} />
+            <ActivityIndicator size={24} color={'white'} />
           ) : (
             <MaterialCommunityIcons
               name={'chevron-right'}

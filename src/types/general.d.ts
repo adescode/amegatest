@@ -43,3 +43,9 @@ export type IpInfoProps = {
   timezone: string;
   isp: string;
 };
+
+export type CarouselItemProps = {
+  title: string;
+  subtitle: string;
+  illustration: string;
+};

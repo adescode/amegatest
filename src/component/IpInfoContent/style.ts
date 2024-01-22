@@ -3,9 +3,9 @@ import colors from '../../theme/colors';
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'flex-start',
+    alignItems: 'center',
     gap: 10,
-    width: '22%',
+    maxWidth: '25%',
   },
   title: {
     color: colors.white,
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   },
   description: {
     color: colors.lightWhite,
-    fontSize: 12,
+    fontSize: 10,
   },
 });
 

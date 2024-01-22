@@ -70,7 +70,7 @@ This is one way to run your app — you can also run it directly from within And
 
 # issue
 
-The of Fetching Live forex data then saving it in store with the updates that follow, make the Market screen fetch took longer to load. This can be optimize, probably to move websocket directly to market screen component and mutate the state directly.
+The Fetching of Live forex data then saving it in store with the updates that follow, make the Market screen fetch took longer to load. This can be optimize, probably to move websocket directly to market screen component and mutate the state directly.
 
 # Library
 

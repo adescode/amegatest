@@ -4,58 +4,45 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Dashboard from '../screens/dashboard';
 import Market from '../screens/market';
 import Profile from '../screens/profile';
+import colors from '../theme/colors';
 
 const Tab = createBottomTabNavigator();
+
+type RouteName = 'Dashboard' | 'Market' | 'Profile';
 
 const MainTab = () => {
   return (
     <Tab.Navigator
       initialRouteName="Feed"
-      screenOptions={{
-        tabBarActiveTintColor: '#3554D1',
-      }}>
-      <Tab.Screen
-        name="Dashboard"
-        component={Dashboard}
-        options={{
-          tabBarLabel: 'Dashboard',
-          tabBarIcon: ({color, size}) => (
+      screenOptions={({route}) => ({
+        tabBarActiveTintColor: colors.default,
+        headerTintColor: colors.default,
+        tabBarIcon: ({color, size}) => {
+          const routeName = route.name as RouteName;
+          const icons = {
+            Dashboard: 'view-dashboard',
+            Market: 'animation',
+            Profile: 'account-circle-outline',
+          };
+
+          return (
             <MaterialCommunityIcons
-              name="view-dashboard"
+              name={icons[routeName]}
               color={color}
               size={size}
             />
-          ),
-        }}
-      />
+          );
+        },
+      })}>
+      <Tab.Screen name="Dashboard" component={Dashboard} />
       <Tab.Screen
         name="Market"
         component={Market}
         options={{
-          tabBarLabel: 'Market',
-          tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons
-              name="animation"
-              color={color}
-              size={size}
-            />
-          ),
+          tabBarLabel: 'Market Data',
         }}
       />
-      <Tab.Screen
-        name="Profile"
-        component={Profile}
-        options={{
-          tabBarLabel: 'Profile',
-          tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons
-              name="account-circle-outline"
-              color={color}
-              size={size}
-            />
-          ),
-        }}
-      />
+      <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
   );
 };

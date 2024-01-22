@@ -12,6 +12,15 @@ const styles = StyleSheet.create({
     borderColor: colors.default,
     borderWidth: 3,
   },
+  image: {height: 200, width: 300},
+  title: {
+    position: 'absolute',
+    backgroundColor: colors.lightWhite,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    padding: 4,
+  },
 });
 
 export default styles;

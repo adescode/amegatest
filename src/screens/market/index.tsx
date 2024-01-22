@@ -5,6 +5,7 @@ import {useIsFocused, useNavigation} from '@react-navigation/native';
 import useStore from '../../store';
 import LiveDataContent from '../../component/LiveDataContent';
 import colors from '../../theme/colors';
+import styles from './style';
 
 const Market = () => {
   const navigation = useNavigation();
@@ -20,9 +21,9 @@ const Market = () => {
   }, [navigation]);
 
   return (
-    <View style={{flex: 1}}>
+    <View style={styles.container}>
       <FlatList
-        style={{flex: 1}}
+        style={styles.container}
         data={liveData}
         renderItem={itemData => {
           const isOdd = itemData.index % 2 == 1;

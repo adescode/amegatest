@@ -3,18 +3,22 @@ import colors from '../../theme/colors';
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: 'white',
+    flexDirection: 'row',
+    padding: 4,
+    justifyContent: 'space-between',
     alignItems: 'center',
-    gap: 10,
-    maxWidth: '25%',
+    margin: 4,
   },
-  title: {
-    color: colors.white,
+  isOddContainer: {
+    backgroundColor: colors.default,
+  },
+  text: {
     fontWeight: 'bold',
     fontSize: 14,
   },
-  description: {
-    color: colors.lightWhite,
-    fontSize: 12,
+  isOddText: {
+    color: 'white',
   },
 });
 

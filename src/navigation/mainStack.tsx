@@ -34,8 +34,9 @@ const MainTab = () => {
           );
         },
       })}>
-      <Tab.Screen name="Dashboard" component={Dashboard} />
+      <Tab.Screen key={'Dashboard'} name="Dashboard" component={Dashboard} />
       <Tab.Screen
+        key="Market"
         name="Market"
         component={Market}
         options={{

@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import colors from '../../theme/colors';
 
 const styles = StyleSheet.create({
   container: {
@@ -8,7 +9,7 @@ const styles = StyleSheet.create({
     borderColor: 'transparent',
   },
   isSelected: {
-    borderColor: 'red',
+    borderColor: colors.default,
     borderWidth: 3,
   },
 });
